@@ -1,12 +1,31 @@
 var gulp = require('gulp');
 var gulp_version_tag = require("gulp-version-tag");
+var version = require('gulp-version-number');
 
-gulp.task('ver', function () {
-    return gulp.src("./src/*.js")
-        .pipe(gulp-version-tag(__dirname, 'package.json'))
+gulp.task('ver2', function () {
+    console.log("Ver")
+    return gulp.src("*.js")
+        .pipe(gulp_version_tag(__dirname, 'package.json'))
         .pipe(gulp.dest("./dist"));
 });
 
-gulp.task('default', function() {
-    gulp.task('default', ['ver']);
+const versionConfig = {
+    'value': '%MDS%',
+    'append': {
+        'key': 'v',
+        'to': ['css', 'js'],
+    },
+};
+
+gulp.task('ver', function () {
+    return gulp.src('src/*.html')
+        .pipe(version(versionConfig))
+        .pipe(gulp.dest('build'));
+});
+
+gulp.task('default', function () {
+    console.log("Starting default task")
+    gulp.task('default', ['ver', 'ver2']);
+
+    console.log("Finish")
 });
