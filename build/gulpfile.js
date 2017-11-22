@@ -18,7 +18,7 @@ const versionConfig = {
 
 gulp.task('ver', function () {
     console.log("Ver")
-    return gulp.src('*.html')
+    return gulp.src('*.js')
         .pipe(version(versionConfig))
         .pipe(gulp.dest('build'));
 });
