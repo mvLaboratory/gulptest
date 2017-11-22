@@ -4,4 +4,8 @@ function outputWriter() {
     outputWriter.prototype.write = function () {
         document.getElementById("output").innerHTML = text;
     }
+
+    outputWriter.prototype.write2 = function () {
+        document.getElementById("output").innerHTML = "dfdsf";
+    }
 }

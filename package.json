@@ -8,11 +8,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "gulptest"
+    "url": "https://github.com/mvLaboratory/gulptest.git"
   },
   "keywords": [
     "gulp"
   ],
   "author": "MV",
-  "license": "UNLICENSED"
+  "license": "UNLICENSED",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-version-tag": "0.0.10"
+  }
 }
