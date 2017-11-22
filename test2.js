@@ -16,8 +16,4 @@ function outputWriter() {
     outputWriter.prototype.write4 = function () {
         document.getElementById("output").innerHTML = "dfdsf";
     }
-
-    outputWriter.prototype.write4 = function () {
-        document.getElementById("output").innerHTML = "dfdsf";
-    }
 }

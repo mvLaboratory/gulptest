@@ -1,12 +1,5 @@
 var gulp = require('gulp');
-var gulp_version_tag = require("gulp-version-tag");
 var version = require('gulp-version-number');
-
-gulp.task('ver2', function () {
-    return gulp.src("*.js")
-        .pipe(gulp_version_tag(__dirname, 'package.json'))
-        .pipe(gulp.dest("./dist"));
-});
 
 const versionConfig = {
     'value': '%MDS%',
@@ -16,16 +9,17 @@ const versionConfig = {
     },
 };
 
-gulp.task('ver', function () {
-    console.log("Ver")
+gulp.task('versions', function () {
+    console.log("vers");
     return gulp.src('*.html')
         .pipe(version(versionConfig))
         .pipe(gulp.dest('build'));
 });
 
 gulp.task('default', function () {
-    console.log("Starting default task")
-    gulp.task('default', ['ver', 'ver2']);
+    console.log("Starting default tasks");
 
-    console.log("Finish")
+    gulp.task('default', ['versions']);
+
+    console.log("Finish");
 });
