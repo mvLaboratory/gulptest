@@ -8,8 +8,4 @@ function outputWriter() {
     outputWriter.prototype.write2 = function () {
         document.getElementById("output").innerHTML = "dfdsf";
     }
-
-    outputWriter.prototype.write3 = function () {
-        document.getElementById("output").innerHTML = "dfdsf";
-    }
 }
