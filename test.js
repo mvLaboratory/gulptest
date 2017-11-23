@@ -17,7 +17,15 @@ function outputWriter() {
         document.getElementById("output").innerHTML = "dfdsf";
     }
 
-    outputWriter.prototype.write4 = function () {
+    outputWriter.prototype.write6 = function () {
         document.getElementById("output").innerHTML = "dfdsf";
     }
+
+    outputWriter.prototype.write8 = function () {
+        document.getElementById("output").innerHTML = "dfdsf";
+    }
+
+   outputWriter.prototype.write9 = function () {
+        document.getElementById("output").innerHTML = "dfdsssf";
+   }
 }

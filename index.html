@@ -5,13 +5,17 @@
 		<meta name="msapplication-config" content="none" />
 		<title>Test gulp</title>
 		
-		<script src="test.js"></script>
+		<script src="test.js?v=<%= getjavascriptDate() %>"></script>
+        <script src="test2.js?v=<%= Session("Version") %>"></script>
+        <script src="<%= "folderName" %>/test3.js"></script>
+        <script src="<%= 'folderName' %>/test4.js?ver=<%= getjavascriptDate %>"></script>
 	</head>
 	<body>
 		<p id="output"> </p>
 		<p>sdfsdfdsfdf</p>
 		<p>sdfsdfdsfdf</p>
 		<p>sdfsdfdsfdf</p>
+        <p>please open file: folderName/test4.js</p>
 
 
         <script type="text/javascript" language="javascript">
